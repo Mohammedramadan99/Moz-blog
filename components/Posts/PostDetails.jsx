@@ -44,7 +44,7 @@ const PostDetails = () => {
                         <div className="author">
                             @{postDetails?.author?.name}
                         </div>
-                        {postDetails?.author?._id === userAuth._id && (
+                        {postDetails?.author?._id === userAuth?._id && (
                             <Link href={`/post/edit/${postDetails?._id}`} className="edit">
                                 <FaEdit/>
                                 edit
