@@ -14,6 +14,7 @@ const LandingPage = dynamic(() => import('../components/MainPage/LandingPage/Lan
 const Categories = dynamic(() => import('../components/MainPage/Categories/Categories'), {
   ssr: false,
 })
+
 export default function Home() {
   
   return (

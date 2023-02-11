@@ -11,6 +11,7 @@ import "swiper/css/pagination";
 import {EffectFade, Navigation, Pagination} from "swiper";
 import {landingPage} from '../../../utils/data'
 import Image from 'next/image';
+
 function LandingPage() {
     const [data,setData] = useState(landingPage)
     // console.log(data)

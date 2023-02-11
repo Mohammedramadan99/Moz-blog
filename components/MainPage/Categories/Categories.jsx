@@ -9,6 +9,7 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+
 function Categories() {
     const dispatch = useDispatch()
     const {categories,loading} = useSelector(state => state.category)

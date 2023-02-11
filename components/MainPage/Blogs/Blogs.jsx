@@ -9,6 +9,7 @@ import { Navigation,  } from "swiper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allPosts } from "@/redux/postSlice";
+import dynamic from "next/dynamic";
 // import Post from "./Post";
 const Post = dynamic(() => import('./Post'), {
   ssr: false,
