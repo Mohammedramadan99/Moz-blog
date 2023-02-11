@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "https://moz-blog-5nrt.vercel.app",
+    "baseUrl": ".",
     "paths": {
       "@/*": ["./*"]
     }

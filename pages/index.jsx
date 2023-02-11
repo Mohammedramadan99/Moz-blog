@@ -28,8 +28,8 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
       </Head>
       <>
-        {/* <LandingPage/> */}
-        {/* <Blogs/> */}
+        <LandingPage/>
+        <Blogs/>
         <Categories/>
       </>
     </>
