@@ -1,17 +1,18 @@
-import Image from "next/image"
-import blog_1 from '../../../public/images/blog_1.jpg'
+
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { EffectFade, Navigation, Pagination } from "swiper";
-import Link from "next/link";
+import { Navigation,  } from "swiper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allPosts } from "@/redux/postSlice";
-import Post from "./Post";
+// import Post from "./Post";
+const Post = dynamic(() => import('./Post'), {
+  ssr: false,
+})
 function Blogs() {
     const dispatch = useDispatch()
     const {posts,loading} = useSelector(state => state.posts)

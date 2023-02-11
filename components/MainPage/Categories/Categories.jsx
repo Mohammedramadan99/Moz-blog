@@ -1,4 +1,3 @@
-import Image from "next/image"
 import {allCategories} from '@/redux/categorySlice'
 import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles

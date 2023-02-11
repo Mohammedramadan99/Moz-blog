@@ -2,8 +2,6 @@ import nc from 'next-connect'
 import db from '../../../utils/dbConnect'
 
 const handler = nc();
-
-import { isAuth } from '@/utils/auth';
 import Category from '@/Modal/CategoryModal';
 
 handler.get(async (req, res) =>
