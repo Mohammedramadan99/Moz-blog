@@ -1,4 +1,4 @@
-import Post from '@/components/MainPage/Blogs/Post'
+import Post from '../../components/MainPage/Blogs/Post'
 import { FilteredPosts } from '../../redux/postSlice'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'

@@ -6,7 +6,7 @@ const handler = nc();
 
 
 import cloudinary from "cloudinary"
-import { isAuth } from '@/utils/auth';
+import { isAuth } from '../../../utils/auth';
 
 cloudinary.config({
   cloud_name: 'dtmjc8y9z',
@@ -20,7 +20,7 @@ handler.get(async (req, res) =>
   try
   {
     const {category} = req.query
-    const posts = await Post.find(category ? {category} : {} ).populate('author').sort({createdAt:-1})
+    const posts = await Post.find({}).populate('author').sort({createdAt:-1})
 
     res.status(200).json({
       posts

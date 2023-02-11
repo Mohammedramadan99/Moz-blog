@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import { Navigation,  } from "swiper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { allPosts } from "@/redux/postSlice";
+import { allPosts } from "../../../redux/postSlice";
 import dynamic from "next/dynamic";
 // import Post from "./Post";
 const Post = dynamic(() => import('./Post'), {
@@ -17,9 +17,11 @@ const Post = dynamic(() => import('./Post'), {
 function Blogs() {
     const dispatch = useDispatch()
     const {posts,loading} = useSelector(state => state.posts)
+    
     useEffect(() => {
         dispatch(allPosts())
     }, [dispatch])
+
     if(loading) return <>loading ....</>
   return (
     <div className='blogsSlider'>
