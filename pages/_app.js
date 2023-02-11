@@ -5,6 +5,7 @@ import "aos/dist/aos.css";
 import { useEffect } from "react";
 import Layout from "../components/Layout/Layout";
 import '../styles/Style.scss'
+
 export default function App({ Component, ...rest }) {
 
   const { store, props } = wrapper.useWrappedStore(rest)

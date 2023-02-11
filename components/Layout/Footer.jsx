@@ -23,7 +23,7 @@ function Footer() {
               <div className="latest">
                 <div className="posts">
                   {latestPosts?.map(p => (
-                    <Link href={`blogs?category=${p.category}`} key={p?._id} className="post" >
+                    <Link href={`blogs?category=${p?.category}`} key={p?._id} className="post" >
                       <div className="img">
                         <Image src={p?.cover} width={50} height={50} style={{objectFit:"cover",borderRadius:"50%"}} alt="img" />
                       </div>
