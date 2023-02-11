@@ -1,7 +1,6 @@
 import nc from 'next-connect'
 import Post from '../../../Modal/postModel'
 import db from '../../../utils/dbConnect'
-import express from 'express'
 
 const handler = nc();
 
@@ -21,8 +20,6 @@ handler.get(async (req, res) =>
   try
   {
     const {category} = req.query
-    
-
     const posts = await Post.find(category ? {category} : {} ).populate('author').sort({createdAt:-1})
 
     res.status(200).json({

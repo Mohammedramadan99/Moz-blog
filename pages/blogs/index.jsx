@@ -1,6 +1,5 @@
 import Post from '@/components/MainPage/Blogs/Post'
-import { allPosts, FilteredPosts } from '@/redux/postSlice'
-import { wrapper } from '@/redux/store'
+import { FilteredPosts } from '../../redux/postSlice'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
