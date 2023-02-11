@@ -19,7 +19,7 @@ function Blogs() {
     const {posts,loading} = useSelector(state => state.posts)
     useEffect(() => {
         dispatch(allPosts())
-    }, [])
+    }, [dispatch])
     if(loading) return <>loading ....</>
   return (
     <div className='blogsSlider'>

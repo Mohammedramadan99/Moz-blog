@@ -15,6 +15,8 @@ const Categories = dynamic(() => import('../components/MainPage/Categories/Categ
   ssr: false,
 })
 
+
+
 export default function Home() {
   
   return (
