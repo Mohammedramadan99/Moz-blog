@@ -60,7 +60,7 @@ export const allPosts = createAsyncThunk(
 
     //http call
     try {
-      const { data } = await axios.get(`${origin}/api/post`);
+      const { data } = await axios.get(`${origin}/api/test`);
       return data;
     } catch (error) {
       if (!error.response) {
