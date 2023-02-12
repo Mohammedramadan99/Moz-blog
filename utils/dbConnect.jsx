@@ -21,9 +21,9 @@ async function connect()
     }
     await mongoose.disconnect();
   }
-  // const db = await mongoose.connect("mongodb+srv://Ecommerce:m1964118@cluster0.7n14b.mongodb.net/mozBlog");
+  const db = await mongoose.connect("mongodb+srv://Ecommerce:m1964118@cluster0.7n14b.mongodb.net/mozBlog");
   // const db = await mongoose.connect("mongodb+srv://mohammed:m1964118@cluster0.7n14b.mongodb.net/mozBlog");
-  const db = await mongoose.connect("mongodb://0.0.0.0:27017/MozBlog");
+  // const db = await mongoose.connect("mongodb://0.0.0.0:27017/MozBlog");
   console.log('new connection');
   connection.isConnected = db.connections[0].readyState;
 }
