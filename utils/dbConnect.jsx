@@ -4,7 +4,6 @@ const connection = {};
 
 async function connect()
 {
-  mongoose.set('strictQuery', false);
 
   if (connection.isConnected)
   {
