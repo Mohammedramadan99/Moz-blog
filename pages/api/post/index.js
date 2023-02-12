@@ -16,13 +16,13 @@ cloudinary.config({
 
 handler.get(async (req, res) =>
 {
-  // await db.connect();
+  await db.connect();
   try
   {
-    // const posts = await Post.find({}).populate('author').sort({createdAt:-1})
+    const posts = await Post.find({}).populate('author').sort({createdAt:-1})
 
     res.status(200).json({
-      posts:"good"
+      posts
     })
   } catch (err)
   {
@@ -31,8 +31,7 @@ handler.get(async (req, res) =>
       message: err.message,
     });
   }
-  // await db.disconnect();
-
+  await db.disconnect();
 })
 
 handler.use(isAuth).post(async (req, res) =>
