@@ -1,4 +1,4 @@
-import PostDetails from "@/components/Posts/PostDetails"
+import PostDetails from "../../components/Posts/PostDetails"
 
 function postDetails() {
     

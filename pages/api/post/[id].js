@@ -4,7 +4,7 @@ import db from '../../../utils/dbConnect'
 
 const handler = nc();
 
-import { isAuth } from '@/utils/auth';
+import { isAuth } from '../../../utils/auth';
 
 
 handler.get(async (req, res) =>

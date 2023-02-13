@@ -1,4 +1,4 @@
-import { logoutAction } from "@/redux/usersSlice"
+import { logoutAction } from "../../redux/usersSlice"
 // import { Menu } from "@mui/icons-material"
 import Link from "next/link"
 import { useState } from "react"

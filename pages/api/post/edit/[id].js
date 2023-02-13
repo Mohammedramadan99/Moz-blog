@@ -3,7 +3,7 @@ import Post from '../../../../Modal/postModel'
 import db from '../../../../utils/dbConnect'
 
 
-import { isAuth } from '@/utils/auth';
+import { isAuth } from '../../../../utils/auth';
 import cloudinary from "cloudinary"
 
 cloudinary.config({
