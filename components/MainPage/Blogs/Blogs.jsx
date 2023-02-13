@@ -10,6 +10,7 @@ import { Navigation,  } from "swiper";
 import { useDispatch, useSelector } from "react-redux";
 // import { allPosts } from "../../../redux/postSlice";
 import dynamic from "next/dynamic";
+import Spinner from '../../Spinner'
 // import Post from "./Post";
 const Post = dynamic(() => import('./Post'), {
   ssr: false,
@@ -20,7 +21,7 @@ function Blogs() {
     
     
 
-    // if(loading) return <>loading ....</>
+    if(loading) return <Spinner/>
   return (
     <div className='blogsSlider'>
         <div className="container">

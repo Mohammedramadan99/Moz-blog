@@ -9,6 +9,7 @@ import { EffectFade, Navigation, Pagination } from "swiper";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
+import Spinner from '../../Spinner';
  
 function Categories() {
     const dispatch = useDispatch()
@@ -18,6 +19,7 @@ function Categories() {
     // }, [dispatch])
     
     // if(loading) return <>loading ....</>
+    if(loading) return <Spinner/>
 
   return (
     <div className='categories_section' data-aos="fade-up">

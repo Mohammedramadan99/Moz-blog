@@ -5,7 +5,7 @@ import Head from 'next/head'
 // import LandingPage from '../components/MainPage/LandingPage/LandingPage';
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { allPosts } from '../redux/postSlice'
 import { allCategories } from '../redux/categorySlice'
 
@@ -21,10 +21,12 @@ const Categories = dynamic(() => import('../components/MainPage/Categories/Categ
   ssr: false,
 })
 
- 
 
 export default function Home() {
+  const {posts} = useSelector(state => state.posts)
   const dispatch = useDispatch()
+  // const {categories} = useSelector(state => state.cateogry)
+  
   useEffect(() => {
     dispatch(allPosts())
     dispatch(allCategories())
