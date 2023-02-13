@@ -17,7 +17,9 @@ function Navbar() {
   }
   return (
     <nav className='mainNav'>
-      <MobileNav mobileSize={mobileSize}/> 
+      
+      {mobileSize && <MobileNav mobileSize={mobileSize}/> }
+
       {!mobileSize && (
         <div className="nav_full">
           <div className="links">

@@ -17,7 +17,7 @@ function Categories() {
     //   // dispatch(allCategories())
     // }, [dispatch])
     
-    if(loading) return <>loading ....</>
+    // if(loading) return <>loading ....</>
 
   return (
     <div className='categories_section' data-aos="fade-up">

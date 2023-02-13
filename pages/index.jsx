@@ -6,27 +6,29 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { allPosts } from '@/redux/postSlice'
-import { allCategories } from '@/redux/categorySlice'
+import { allPosts } from '../redux/postSlice'
+import { allCategories } from '../redux/categorySlice'
 
 const Blogs = dynamic(() => import('../components/MainPage/Blogs/Blogs'), {
   ssr: false,
 })
+
 const LandingPage = dynamic(() => import('../components/MainPage/LandingPage/LandingPage'), {
   ssr: false,
 })
+
 const Categories = dynamic(() => import('../components/MainPage/Categories/Categories'), {
   ssr: false,
 })
 
-
+ 
 
 export default function Home() {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(allPosts())
     dispatch(allCategories())
-}, [dispatch])
+  }, [dispatch])
   return (
     <>
       <Head>

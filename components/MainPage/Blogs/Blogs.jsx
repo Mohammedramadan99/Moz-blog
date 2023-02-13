@@ -20,7 +20,7 @@ function Blogs() {
     
     
 
-    if(loading) return <>loading ....</>
+    // if(loading) return <>loading ....</>
   return (
     <div className='blogsSlider'>
         <div className="container">

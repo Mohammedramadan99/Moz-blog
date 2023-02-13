@@ -1,7 +1,7 @@
 import nc from 'next-connect'
-import db from '../../../utils/dbConnect'
-
 const handler = nc();
+
+import db from '../../../utils/dbConnect'
 import Category from '../../../Modal/CategoryModal';
 
 handler.get(async (req, res) =>

@@ -1,16 +1,17 @@
-import { registerUserAction } from '@/redux/usersSlice';
+import { registerUserAction } from '../../redux/usersSlice';
 import Image from 'next/image';
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import Spinner from '../Spinner';
 
 function Register() {
     const dispatch = useDispatch()
+    const {loading} = useSelector(state => state.users)
     const [name,setName] = useState('')
     const [email,setEmail] = useState('')
     const [password,setPassword] = useState('')
     const [images, setImages] = useState([]);
     const [imagesPreview, setImagesPreview] = useState([]);
-    console.log(imagesPreview)
     const submitHandler = e =>
     {
       e.preventDefault()
@@ -41,6 +42,7 @@ function Register() {
         reader.readAsDataURL(file);
       });
     };
+
   return (
     <div className='register'>
         <form onSubmit={submitHandler}>
@@ -65,7 +67,7 @@ function Register() {
                     <Image src={imagesPreview[0]} fill={true} alt="img" />
                 </div>
             )}
-            <input type="submit" className='submit-btn' value="register" />
+            {!loading ? <Spinner size="sm" /> : <input type="submit" className='submit-btn' value="register" />}
         </form>
     </div>
   )
